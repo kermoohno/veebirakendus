@@ -6,3 +6,5 @@ export class Toode {
         public isActive: boolean
     ) {}
 }
+
+export default Toode
