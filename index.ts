@@ -1,13 +1,15 @@
 import express, { Express, Request, Response } from "express";
-
+import cors from "cors";
 import stringsController from "./controllers/string";
 import productsController from "./controllers/products";
 import productlistController from "./controllers/productlist";
 
 const app: Express = express();
 
+app.use(cors());
+
 app.get('/', (req: Request, res: Response) => {
-    res.send('Express + TypeScript Server');
+    res.send('Express + Typescript Server');
 });
 
 app.use('/', stringsController);
