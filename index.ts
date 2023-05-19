@@ -6,6 +6,9 @@ import productsController from "./controllers/products";
 import productlistController from "./controllers/productlist";
 import parcelmachinesController from "./controllers/parcelmachines";
 import nordpoolController from "./controllers/nordpool";
+import paymentController from "./controllers/payment";
+import payment from "./controllers/payment";
+
 const app: Express = express();
 
 app.use(cors({
@@ -21,6 +24,7 @@ app.use('/', productsController);
 app.use('/', productlistController);
 app.use('/', parcelmachinesController);
 app.use('/', nordpoolController);
+app.use('/', paymentController);
 
 app.listen(4001,() => {
     console.log(`[server]: Server is running at http://localhost:4000`);
