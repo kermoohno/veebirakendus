@@ -1,11 +1,11 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
-import bodyPareser from "body-parser";
+import bodyParserer from "body-parser";
 import stringsController from "./controllers/string";
 import productsController from "./controllers/products";
 import productlistController from "./controllers/productlist";
 import parcelmachinesController from "./controllers/parcelmachines";
-
+import nordpoolController from "./controllers/nordpool";
 const app: Express = express();
 
 app.use(cors({
@@ -20,6 +20,7 @@ app.use('/', stringsController);
 app.use('/', productsController);
 app.use('/', productlistController);
 app.use('/', parcelmachinesController);
+app.use('/', nordpoolController);
 
 app.listen(4001,() => {
     console.log(`[server]: Server is running at http://localhost:4000`);
